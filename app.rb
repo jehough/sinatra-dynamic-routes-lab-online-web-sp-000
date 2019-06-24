@@ -20,14 +20,14 @@ class App < Sinatra::Base
   end
 
   get '/:operation/:number1/:number2' do
-    if param[:operation] == "add"
-      "#{param[:number1].to_i + param[:number2].to_i}"
-    elsif param[:operation] == "subtract"
-      "#{param[:number1].to_i - param[:number2].to_i}"
-    elsif param[:operation] == "multiply"
-      "#{param[:number1].to_i * param[:number2].to_i}"
-    elsif param[:operation] == "divide"
-      "#{param[:number1].to_i / param[:number2].to_i}"
+    if params[:operation] == "add"
+      "#{params[:number1].to_i + params[:number2].to_i}"
+    elsif params[:operation] == "subtract"
+      "#{params[:number1].to_i - params[:number2].to_i}"
+    elsif params[:operation] == "multiply"
+      "#{params[:number1].to_i * params[:number2].to_i}"
+    elsif params[:operation] == "divide"
+      "#{params[:number1].to_i / params[:number2].to_i}"
     else
       "Not a known operation!"
     end
